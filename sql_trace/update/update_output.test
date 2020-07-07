@@ -13,7 +13,7 @@ UPDATE xxx SET c2 = '2020-01-02 11:22:33.721-05' WHERE c1 = 2
 query I nosort
 SELECT * from xxx ORDER BY c1 ASC
 ----
-4 values hashing to 1fed0b31e531c4a9e86558a40df65736
+4 values hashing to caeda8dba73c9a002266ce348d8727e9
 
 statement ok
 DROP TABLE xxx

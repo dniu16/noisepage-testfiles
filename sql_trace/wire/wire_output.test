@@ -7,5 +7,5 @@ INSERT INTO tbl VALUES (15.445), (15.721)
 query I nosort
 SELECT * FROM tbl
 ----
-2 values hashing to aa7efdbec983648701cc93bf8eb81185
+2 values hashing to 00a64fad3d0c21a9067d009652d138f4
 

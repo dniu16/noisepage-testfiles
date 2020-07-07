@@ -10,7 +10,7 @@ INSERT INTO data(int_val, double_val, str_i_val, str_a_val, is_null) VALUES(NULL
 query I nosort
 SELECT cos(double_val) AS result FROM data WHERE is_null = 0
 ----
-1 values hashing to 01dcd7dd3c9b53b56458344b65ccaf0c
+1 values hashing to f2ec9f8b13a07f120c16def39f4fbbc2
 
 query I nosort
 SELECT cos(double_val) AS result FROM data WHERE is_null = 1
@@ -20,7 +20,7 @@ SELECT cos(double_val) AS result FROM data WHERE is_null = 1
 query I nosort
 SELECT sin(double_val) AS result FROM data WHERE is_null = 0
 ----
-1 values hashing to 4f8d696bc1625f15a3b432266214c599
+1 values hashing to 4aaf19241ee767c1185a7815aef61de7
 
 query I nosort
 SELECT sin(double_val) AS result FROM data WHERE is_null = 1
@@ -30,7 +30,7 @@ SELECT sin(double_val) AS result FROM data WHERE is_null = 1
 query I nosort
 SELECT tan(double_val) AS result FROM data WHERE is_null = 0
 ----
-1 values hashing to 848085c535a3777f926b5b7ba32ac4a3
+1 values hashing to eb46483c930e203e9e3100f24360bac6
 
 query I nosort
 SELECT tan(double_val) AS result FROM data WHERE is_null = 1

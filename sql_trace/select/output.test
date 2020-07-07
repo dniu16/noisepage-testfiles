@@ -56,7 +56,7 @@ INSERT INTO tbl2 VALUES (1, 1.37)
 query I nosort
 SELECT a + b AS AB FROM tbl2
 ----
-1 values hashing to 5bc2fbbd3369944f6f8dea481840a335
+1 values hashing to 8ce0fad9de37990d53615a006836d77a
 
 query I nosort
 SELECT 2+3
@@ -75,5 +75,5 @@ INSERT INTO xxx (c1, c2) VALUES (2, '2020-01-02 11:22:33.721-05')
 query I nosort
 SELECT * FROM xxx WHERE c2 = '2020-01-02 11:22:33.721-05'
 ----
-2 values hashing to f8152e0cd62d1bae23466256426ddc21
+2 values hashing to a0e91b1aa8295dd1f1f29c33471fd5b9
 

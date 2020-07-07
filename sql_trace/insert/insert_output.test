@@ -40,7 +40,7 @@ CREATE TABLE foo.bar (id integer)
 query I nosort
 SELECT * from pg_catalog.pg_class
 ----
-13134 values hashing to f3922b5ac98728bc933b39929ef2bcfe
+13134 values hashing to 95af2a993ef95f65a725a629a83986fa
 
 statement ok
 DROP SCHEMA foo CASCADE
@@ -148,5 +148,5 @@ INSERT INTO xxx (c1, c2) VALUES ('123'::bigint, '2020-01-02 12:23:34.56789')
 query I nosort
 SELECT * from xxx
 ----
-2 values hashing to 4ebe2c72e750edef28f213d56883b8aa
+2 values hashing to 98400e9a6fe8be8c5e269adabb13e664
 
