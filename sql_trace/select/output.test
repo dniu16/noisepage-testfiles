@@ -70,11 +70,6 @@ CREATE TABLE xxx (id INT PRIMARY KEY, val INT)
 statement ok
 INSERT INTO xxx VALUES (1,1),(2,2),(3,3),(4,4)
 
-query I nosort
-SELECT * FROM xxx WHERE NOT(id = 2)
-----
-6 values hashing to e5502646cbb84ba31d910703154d61d5
-
 statement ok
 DROP TABLE IF EXISTS xxx
 
