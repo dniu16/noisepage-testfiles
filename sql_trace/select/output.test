@@ -1,5 +1,5 @@
 statement ok
-CREATE TABLE tbl(c1 INTEGER NOT NULL PRIMARY KEY, c2 INTEGER, c3 INTEGER)
+CREATE TABLE tbl(c1 int NOT NULL PRIMARY KEY, c2 int, c3 int)
 
 statement ok
 INSERT INTO tbl VALUES (1, 2, 3), (2, 3, 4)
@@ -48,22 +48,6 @@ SELECT COUNT(DISTINCT c2) AS STOCK_COUNT FROM tbl
 1 values hashing to 26ab0db90d72e28ad0ba1e22ee510510
 
 statement ok
-CREATE TABLE tbl2 (a int, b float)
-
-statement ok
-INSERT INTO tbl2 VALUES (1, 1.37)
-
-query I nosort
-SELECT a + b AS AB FROM tbl2
-----
-1 values hashing to 8ce0fad9de37990d53615a006836d77a
-
-query I nosort
-SELECT 2+3
-----
-1 values hashing to 1dcca23355272056f04fe8bf20edfce0
-
-statement ok
 CREATE TABLE xxx (c1 int, c2 timestamp)
 
 statement ok
@@ -75,5 +59,42 @@ INSERT INTO xxx (c1, c2) VALUES (2, '2020-01-02 11:22:33.721-05')
 query I nosort
 SELECT * FROM xxx WHERE c2 = '2020-01-02 11:22:33.721-05'
 ----
-2 values hashing to a0e91b1aa8295dd1f1f29c33471fd5b9
+2 values hashing to f8152e0cd62d1bae23466256426ddc21
 
+statement ok
+DROP TABLE IF EXISTS xxx
+
+statement ok
+CREATE TABLE xxx (id INT PRIMARY KEY, val INT)
+
+statement ok
+INSERT INTO xxx VALUES (1,1),(2,2),(3,3),(4,4)
+
+query I nosort
+SELECT * FROM xxx WHERE NOT(id = 2)
+----
+6 values hashing to e5502646cbb84ba31d910703154d61d5
+
+statement ok
+DROP TABLE IF EXISTS xxx
+
+statement ok
+DROP TABLE IF EXISTS tbl
+
+statement ok
+CREATE TABLE tbl (a int, b float)
+
+statement ok
+INSERT INTO tbl VALUES (1, 1.37)
+
+query I nosort
+SELECT a + b AS AB FROM tbl
+----
+1 values hashing to 5bc2fbbd3369944f6f8dea481840a335
+
+query I nosort
+SELECT 2+3
+----
+1 values hashing to 1dcca23355272056f04fe8bf20edfce0
+
+statement ok
