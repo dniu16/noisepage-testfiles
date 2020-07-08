@@ -37,11 +37,6 @@ CREATE SCHEMA foo
 statement ok
 CREATE TABLE foo.bar (id integer)
 
-query I nosort
-SELECT * from pg_catalog.pg_class
-----
-13134 values hashing to 73ea768f097592ae6a919e209b4f9902
-
 statement ok
 DROP SCHEMA foo CASCADE
 
