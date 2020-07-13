@@ -47,3 +47,5 @@ SELECT lower(str_a_val) AS result FROM data WHERE is_null = 1
 ----
 1 values hashing to 68b329da9893e34099c7d8ad5cb9c940
 
+statement ok
+DROP TABLE data

@@ -48,6 +48,9 @@ SELECT COUNT(DISTINCT c2) AS STOCK_COUNT FROM tbl
 1 values hashing to 26ab0db90d72e28ad0ba1e22ee510510
 
 statement ok
+DROP TABLE tbl
+
+statement ok
 CREATE TABLE xxx (c1 int, c2 timestamp)
 
 statement ok
@@ -74,9 +77,6 @@ statement ok
 DROP TABLE IF EXISTS xxx
 
 statement ok
-DROP TABLE IF EXISTS tbl
-
-statement ok
 CREATE TABLE tbl (a int, b float)
 
 statement ok
@@ -93,3 +93,4 @@ SELECT 2+3
 1 values hashing to 1dcca23355272056f04fe8bf20edfce0
 
 statement ok
+DROP TABLE tbl

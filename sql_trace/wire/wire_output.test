@@ -9,3 +9,5 @@ SELECT * FROM tbl
 ----
 2 values hashing to 00a64fad3d0c21a9067d009652d138f4
 
+statement ok
+DROP TABLE tbl

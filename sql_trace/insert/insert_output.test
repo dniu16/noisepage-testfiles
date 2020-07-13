@@ -18,6 +18,9 @@ SELECT c1, c2, c3 from tbl
 6 values hashing to 2fec777696bc70cae04c3409a40831d4
 
 statement ok
+DROP TABLE tbl
+
+statement ok
 CREATE TABLE xxx (col1 INT)
 
 statement ok
@@ -77,6 +80,9 @@ query I nosort
 SELECT * FROM xxx01
 ----
 20 values hashing to b1415826fbeae3cb232c089206a830c0
+
+statement ok
+DROP TABLE xxx01
 
 statement ok
 CREATE TABLE xxx (id integer, val integer DEFAULT 123)
@@ -145,3 +151,5 @@ SELECT * from xxx
 ----
 2 values hashing to 98400e9a6fe8be8c5e269adabb13e664
 
+statement ok
+DROP TABLE xxx
